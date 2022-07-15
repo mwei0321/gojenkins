@@ -1,0 +1,10 @@
+version: '1.0'
+services:
+  gojenkins:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: gojenkins
+    container_name: gojenkins
+    ports:
+      - 8055:8080
