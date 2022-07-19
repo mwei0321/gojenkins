@@ -12,7 +12,7 @@ pipeline {
 		}
         stage('编译文件') {
             steps {
-                sh 'go build -o ./main ./main.go'
+                sh '/usr/local/go/bin/go build -o ./main ./main.go'
             }
 		}
         stage('打包docker镜像') {
