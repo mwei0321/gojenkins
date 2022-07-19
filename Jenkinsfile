@@ -7,12 +7,12 @@ pipeline {
 	stages {
 		stage('拉取仓库代码') {
             steps {
-                echo '摘取代码成功'
+                git 'https://github.com/mwei0321/gojenkins.git'
             }
 		}
         stage('编译文件') {
             steps {
-                echo '编译文件成功'
+                sh 'go build -o ./main ./main.go'
             }
 		}
         stage('打包docker镜像') {
